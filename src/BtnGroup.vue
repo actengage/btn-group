@@ -10,7 +10,6 @@
 <script>
 import Btn from '@vue-interface/btn';
 import Sizeable from '@vue-interface/sizeable';
-import MergeClasses from '@vue-interface/merge-classes';
 
 export default {
 
@@ -21,8 +20,7 @@ export default {
     },
 
     mixins: [
-        Sizeable,
-        MergeClasses
+        Sizeable
     ],
 
     props: {
