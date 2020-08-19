@@ -35,7 +35,7 @@ module.exports = plugin(function({ addComponents, theme }) {
         '.btn-group': {
             // Prevent double borders when buttons are next to each other
             '> .btn:not(:first-child), > .btn-group:not(:first-child)': {
-                marginLeft: -theme('btn.borderWidth')
+                marginLeft: `-${theme('btn.borderWidth')}`
             },
 
             // Reset rounded corners
@@ -117,7 +117,7 @@ module.exports = plugin(function({ addComponents, theme }) {
             },
 
             '> .btn:not(:first-child), > .btn-group:not(:first-child)': {
-                marginTop: -theme('btn.borderWidth')
+                marginTop: `-${theme('btn.borderWidth')}`
             },
 
             // Reset rounded corners
