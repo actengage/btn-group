@@ -39,6 +39,7 @@
   "homepage": "https://github.com/vue-interface/btn/docs#readme",
   "dependencies": {
     "@vue-interface/btn": "^1.0.0",
+    "@vue-interface/sizeable": "^1.0.4",
     "@vue-interface/variant": "^1.1.7",
     "vue": "^2.6.14"
   },
