@@ -1,6 +1,8 @@
 const plugin = require('tailwindcss/plugin');
+const sizes = require('@vue-interface/btn/tailwindcss/sizes');
 
 module.exports = plugin(function({ addComponents, theme }) {
+
     const component = {
         // stylelint-disable selector-no-qualifying-type
         // Make the div behave like a button
@@ -50,22 +52,6 @@ module.exports = plugin(function({ addComponents, theme }) {
             }
         },
 
-        // Sizing
-        //
-        // Remix the default button sizing classes into new ones for easier manipulation.
-
-        '.btn-group-sm > .btn': {
-            padding: `${theme('btn.sm.paddingY')} ${theme('btn.sm.paddingX')}`,
-            borderRadius: theme('btn.sm.borderRadius'),
-            fontSize: theme('btn.sm.fontSize'),
-        },
-
-        '.btn-group-lg > .btn': {
-            padding: `${theme('btn.lg.paddingY')} ${theme('btn.lg.paddingX')}`,
-            borderRadius: theme('btn.lg.borderRadius'),
-            fontSize: theme('btn.lg.fontSize'),
-        },
-
         //
         // Split button dropdowns
         //
@@ -80,16 +66,6 @@ module.exports = plugin(function({ addComponents, theme }) {
             '.dropleft &::before': {
                 marginRight: 0
             }
-        },
-
-        '.btn-sm + .dropdown-toggle-split': {
-            'paddingRight': `calc(${theme('btn.sm.paddingX')} * .75)`,
-            'paddingLeft': `calc(${theme('btn.sm.paddingX')} * .75)`,
-        },
-
-        '.btn-lg + .dropdown-toggle-split': {
-            'paddingRight': `calc(${theme('btn.lg.paddingX')} * .75)`,
-            'paddingLeft': `calc(${theme('btn.lg.paddingX')} * .75)`,
         },
 
         // The clickable button for toggling the menu
@@ -156,11 +132,27 @@ module.exports = plugin(function({ addComponents, theme }) {
         }
     };
 
+    // Btn Sizes
+    Object.entries(theme('btnGroup.sizes'))
+        .reduce((carry, [size, { padding, paddingX, borderRadius, fontSize }]) => {
+            return Object.assign(component, {
+                [`.btn-group-${size} > .btn`]: {
+                    padding,
+                    borderRadius,
+                    fontSize,
+                },
+                [`.btn-${size} + .dropdown-toggle-split`]: {
+                    'paddingRight': `calc(${paddingX} * .75)`,
+                    'paddingLeft': `calc(${paddingX} * .75)`,
+                }
+            });
+        }, component);
+
     addComponents(component);
 }, {
     theme: {
         btnGroup: theme => ({
-            //
+            sizes: theme('btn.sizes', sizes)
         })
     }
 });

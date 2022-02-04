@@ -1,23 +1,15 @@
 <template>
     <div :class="classes" :data-toggle="toggle ? 'buttons' : false" role="group">
-        <template v-if="buttons">
-            <btn v-for="(button, i) in buttons" :key="i" v-bind="button" />
-        </template>
         <slot />
     </div>
 </template>
 
 <script>
-import Btn from '@vue-interface/btn';
-import Sizeable from '@vue-interface/sizeable';
+import { Sizeable } from '@vue-interface/sizeable';
 
 export default {
 
     name: 'BtnGroup',
-
-    components: {
-        Btn
-    },
 
     mixins: [
         Sizeable
@@ -26,11 +18,16 @@ export default {
     props: {
 
         /**
-         * An array of buttons
+         * The size prefix.
          *
-         * @type {Array}
+         * @param {String}
          */
-        buttons: Array,
+        sizePrefix: {
+            type: String,
+            default() {
+                return 'btn-group';
+            }
+        },
 
         /**
          * Denote the button group as toggle buttons
@@ -54,7 +51,8 @@ export default {
             return {
                 'btn-group': !this.vertical,
                 'btn-group-toggle': this.toggle,
-                'btn-group-vertical': this.vertical
+                'btn-group-vertical': this.vertical,
+                [this.sizeableClass]: !!this.size,
             };
         }
 
