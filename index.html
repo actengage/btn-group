@@ -16,6 +16,15 @@
                 <btn variant="secondary">Middle</btn>
                 <btn variant="secondary">Right</btn>
             </btn-group>
+
+            <h2 class="text-2xl mt-6 mb-3">Split Buttons</h2>
+
+            <div role="group" class="btn-dropdown-split btn-dropdown mr-1 btn-group">
+                <button aria-haspopup="true" type="button" class="btn btn-secondary">Primary</button>
+                <div role="group" class="btn-group">
+                    <button type="button" aria-haspopup="true" class="btn btn-secondary dropdown-toggle-split dropdown-toggle"></button>
+                </div>
+            </div>
             
             <h2 class="text-2xl mt-6 mb-3">Button Toolbar</h2>
 
@@ -112,8 +121,8 @@
                 </btn-group>
             </div>
 
-            <div class="mb-2">
-                <btn-group size="4xl">
+            <div>
+                <btn-group size="4xl" class="mb-2">
                     <btn variant="secondary">Left</btn>
                     <btn variant="secondary">Middle</btn>
                     <btn variant="secondary">Right</btn>
@@ -150,16 +159,12 @@
 
             <h2 class="text-2xl mt-6 mb-3">Vertical Variation</h2>
 
-            <form-group>
-                <btn-group vertical>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                </btn-group>
-            </form-group>
+            <btn-group vertical>
+                <btn variant="secondary">Button</btn>
+                <btn variant="secondary">Button</btn>
+                <btn variant="secondary">Button</btn>
+                <btn variant="secondary">Button</btn>
+            </btn-group>
 
             <!--
             <form-group>

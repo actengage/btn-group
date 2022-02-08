@@ -2,7 +2,6 @@ const plugin = require('tailwindcss/plugin');
 const sizes = require('@vue-interface/btn/tailwindcss/sizes');
 
 module.exports = plugin(function({ addComponents, theme }) {
-
     const component = {
         // stylelint-disable selector-no-qualifying-type
         // Make the div behave like a button
