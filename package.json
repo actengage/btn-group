@@ -36,28 +36,31 @@
   "bugs": {
     "url": "https://github.com/vue-interface/btn/issues"
   },
-  "homepage": "https://github.com/vue-interface/btn/docs#readme",
+  "homepage": "https://github.com/vue-interface/btn",
   "dependencies": {
-    "@vue-interface/btn": "^1.0.0",
-    "@vue-interface/sizeable": "^1.0.4",
-    "@vue-interface/variant": "^1.1.7",
-    "vue": "^2.6.14"
+    "@vue-interface/btn": "^3.0.0-beta.0",
+    "@vue-interface/sizeable": "^2.0.0-beta.1",
+    "@vue-interface/variant": "^2.0.0-beta.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^5.3.0",
-    "@vue-interface/dropdown-menu": "^1.0.8",
-    "autoprefixer": "^10.4.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue-interface/dropdown-menu": "^1.0.14",
+    "autoprefixer": "^10.4.8",
     "babel-eslint": "^10.1.0",
     "babel-preset-vue": "^2.0.2",
     "change-case": "^4.1.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.4.0",
     "pascalcase": "^2.0.0",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.16",
     "postcss-functions": "^4.0.2",
-    "postcss-hexrgba": "^2.0.1",
-    "tailwindcss": "^3.0.18",
-    "vite": "^2.7.2",
-    "vite-plugin-vue2": "^1.9.3"
+    "postcss-hexrgba": "^2.1.0",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.9",
+    "vue": "^3.2.37"
   }
 }

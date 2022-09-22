@@ -1,87 +1,32 @@
-var Sizeable = {
+import { openBlock as i, createElementBlock as a, normalizeClass as u, renderSlot as l } from "vue";
+const p = {
   props: {
+    componentPrefix: String,
     size: String,
-    sizePrefix: {
-      type: String,
-      default() {
-        return this.$options.name && this.$options.name.toLowerCase();
-      }
-    }
+    sizePrefix: String
   },
   computed: {
     sizeableClassPrefix() {
-      return this.sizePrefix;
+      return this.sizePrefix || this.componentPrefix;
+    },
+    hasSizeablePrefix() {
+      return this.size && !!this.size.match(
+        new RegExp(`^${this.sizeableClassPrefix}`)
+      );
     },
     sizeableClass() {
-      if (!this.size || !this.sizeableClassPrefix) {
-        return "";
-      }
-      return `${this.sizeableClassPrefix}-${this.size}`;
+      return this.size ? !this.sizeableClassPrefix || this.hasSizeablePrefix ? this.size : `${this.sizeableClassPrefix}-${this.size}` : "";
     }
   }
-};
-var render$2 = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { class: _vm.classes, attrs: { "data-toggle": _vm.toggle ? "buttons" : false, "role": "group" } }, [_vm._t("default")], 2);
-};
-var staticRenderFns$2 = [];
-function normalizeComponent(scriptExports, render2, staticRenderFns2, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
-  var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
-  if (render2) {
-    options.render = render2;
-    options.staticRenderFns = staticRenderFns2;
-    options._compiled = true;
-  }
-  if (functionalTemplate) {
-    options.functional = true;
-  }
-  if (scopeId) {
-    options._scopeId = "data-v-" + scopeId;
-  }
-  var hook;
-  if (moduleIdentifier) {
-    hook = function(context) {
-      context = context || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext;
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== "undefined") {
-        context = __VUE_SSR_CONTEXT__;
-      }
-      if (injectStyles) {
-        injectStyles.call(this, context);
-      }
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier);
-      }
-    };
-    options._ssrRegister = hook;
-  } else if (injectStyles) {
-    hook = shadowMode ? function() {
-      injectStyles.call(this, (options.functional ? this.parent : this).$root.$options.shadowRoot);
-    } : injectStyles;
-  }
-  if (hook) {
-    if (options.functional) {
-      options._injectStyles = hook;
-      var originalRender = options.render;
-      options.render = function renderWithStyleInjection(h, context) {
-        hook.call(context);
-        return originalRender(h, context);
-      };
-    } else {
-      var existing = options.beforeCreate;
-      options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-    }
-  }
-  return {
-    exports: scriptExports,
-    options
-  };
-}
-const __vue2_script$2 = {
+}, c = (e, s) => {
+  const t = e.__vccOpts || e;
+  for (const [o, r] of s)
+    t[o] = r;
+  return t;
+}, g = {
   name: "BtnGroup",
   mixins: [
-    Sizeable
+    p
   ],
   props: {
     sizePrefix: {
@@ -103,55 +48,41 @@ const __vue2_script$2 = {
       };
     }
   }
-};
-const __cssModules$2 = {};
-var __component__$2 = /* @__PURE__ */ normalizeComponent(__vue2_script$2, render$2, staticRenderFns$2, false, __vue2_injectStyles$2, null, null, null);
-function __vue2_injectStyles$2(context) {
-  for (let o in __cssModules$2) {
-    this[o] = __cssModules$2[o];
-  }
+}, f = ["data-toggle"];
+function _(e, s, t, o, r, n) {
+  return i(), a("div", {
+    class: u(n.classes),
+    "data-toggle": t.toggle ? "buttons" : !1,
+    role: "group"
+  }, [
+    l(e.$slots, "default")
+  ], 10, f);
 }
-var BtnGroup = /* @__PURE__ */ function() {
-  return __component__$2.exports;
-}();
-var render$1 = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "btn-group-toggle", attrs: { "data-toggle": "buttons" } }, [_vm._t("default")], 2);
-};
-var staticRenderFns$1 = [];
-const __vue2_script$1 = {
+const P = /* @__PURE__ */ c(g, [["render", _]]), d = {
   name: "BtnGroupToggle"
+}, h = {
+  class: "btn-group-toggle",
+  "data-toggle": "buttons"
 };
-const __cssModules$1 = {};
-var __component__$1 = /* @__PURE__ */ normalizeComponent(__vue2_script$1, render$1, staticRenderFns$1, false, __vue2_injectStyles$1, null, null, null);
-function __vue2_injectStyles$1(context) {
-  for (let o in __cssModules$1) {
-    this[o] = __cssModules$1[o];
-  }
+function $(e, s, t, o, r, n) {
+  return i(), a("div", h, [
+    l(e.$slots, "default")
+  ]);
 }
-var BtnGroupToggle = /* @__PURE__ */ function() {
-  return __component__$1.exports;
-}();
-var render = function() {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c("div", { staticClass: "btn-toolbar", attrs: { "role": "toolbar" } }, [_vm._t("default")], 2);
-};
-var staticRenderFns = [];
-const __vue2_script = {
+const B = /* @__PURE__ */ c(d, [["render", $]]), b = {
   name: "BtnToolbar"
+}, z = {
+  class: "btn-toolbar",
+  role: "toolbar"
 };
-const __cssModules = {};
-var __component__ = /* @__PURE__ */ normalizeComponent(__vue2_script, render, staticRenderFns, false, __vue2_injectStyles, null, null, null);
-function __vue2_injectStyles(context) {
-  for (let o in __cssModules) {
-    this[o] = __cssModules[o];
-  }
+function m(e, s, t, o, r, n) {
+  return i(), a("div", z, [
+    l(e.$slots, "default")
+  ]);
 }
-var BtnToolbar = /* @__PURE__ */ function() {
-  return __component__.exports;
-}();
-export { BtnGroup, BtnGroupToggle, BtnToolbar };
+const v = /* @__PURE__ */ c(b, [["render", m]]);
+export {
+  P as BtnGroup,
+  B as BtnGroupToggle,
+  v as BtnToolbar
+};
