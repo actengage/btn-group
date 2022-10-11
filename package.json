@@ -46,7 +46,7 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-babel": "^6.0.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue-interface/dropdown-menu": "^2.0.0-beta.0",
     "autoprefixer": "^10.4.8",
