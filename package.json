@@ -1,6 +1,6 @@
 {
   "name": "@vue-interface/btn-group",
-  "version": "1.0.3-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "A Vue button group component.",
   "files": [
     "dist",
@@ -45,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/vue-interface/btn/issues"
   },
-  "homepage": "https://github.com/vue-interface/btn/docs#readme",
+  "homepage": "https://github.com/vue-interface/btn",
   "dependencies": {
     "@vue-interface/btn": "^3.0.0-beta.0",
     "@vue-interface/sizeable": "^2.0.0-beta.8",
