@@ -1,13 +1,8 @@
-<template>
-    <div :class="classes" :data-toggle="toggle ? 'buttons' : false" role="group">
-        <slot />
-    </div>
-</template>
-
-<script>
+<script lang="ts">
 import { Sizeable } from '@vue-interface/sizeable';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
 
     name: 'BtnGroup',
 
@@ -58,5 +53,14 @@ export default {
 
     }
 
-};
+});
 </script>
+
+<template>
+    <div
+        :class="classes"
+        :data-toggle="toggle ? 'buttons' : false"
+        role="group">
+        <slot />
+    </div>
+</template>
