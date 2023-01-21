@@ -7,12 +7,12 @@
     "tailwindcss"
   ],
   "type": "module",
-  "main": "./dist/btn-group.umd.cjs",
-  "module": "./dist/btn-group.es.js",
+  "main": "./dist/btn-group.js",
+  "module": "./dist/btn-group.umd.cjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/btn-group.es.js",
+      "import": "./dist/btn-group.js",
       "require": "./dist/btn-group.umd.cjs",
       "types": "./dist/index.d.ts"
     }
