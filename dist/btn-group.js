@@ -1,27 +1,9 @@
-import { defineComponent as i, openBlock as n, createElementBlock as a, normalizeClass as g, renderSlot as l } from "vue";
-const u = i({
-  props: {
-    componentPrefix: String,
-    size: String,
-    sizePrefix: String
-  },
-  computed: {
-    sizeableClassPrefix() {
-      return this.sizePrefix || this.componentPrefix;
-    },
-    hasSizeablePrefix() {
-      return this.size === void 0 ? !1 : !!this.size.match(
-        new RegExp(`^${this.sizeableClassPrefix}`)
-      );
-    },
-    sizeableClass() {
-      return this.size ? !this.sizeableClassPrefix || this.hasSizeablePrefix ? this.size : `${this.sizeableClassPrefix}-${this.size}` : "";
-    }
-  }
-}), f = i({
+import { Sizeable as g } from "@vue-interface/sizeable";
+import { defineComponent as i, openBlock as r, createElementBlock as a, normalizeClass as u, renderSlot as l } from "vue";
+const d = i({
   name: "BtnGroup",
   mixins: [
-    u
+    g
   ],
   props: {
     /**
@@ -58,44 +40,44 @@ const u = i({
       };
     }
   }
-}), c = (e, t) => {
-  const s = e.__vccOpts || e;
-  for (const [o, r] of t)
-    s[o] = r;
-  return s;
-}, d = ["data-toggle"];
-function h(e, t, s, o, r, p) {
-  return n(), a("div", {
-    class: g(e.classes),
-    "data-toggle": e.toggle ? "buttons" : !1,
+}), c = (t, o) => {
+  const e = t.__vccOpts || t;
+  for (const [s, n] of o)
+    e[s] = n;
+  return e;
+}, _ = ["data-toggle"];
+function f(t, o, e, s, n, p) {
+  return r(), a("div", {
+    class: u(t.classes),
+    "data-toggle": t.toggle ? "buttons" : !1,
     role: "group"
   }, [
-    l(e.$slots, "default")
-  ], 10, d);
+    l(t.$slots, "default")
+  ], 10, _);
 }
-const v = /* @__PURE__ */ c(f, [["render", h]]), _ = i({
+const k = /* @__PURE__ */ c(d, [["render", f]]), $ = i({
   name: "BtnGroupToggle"
-}), $ = {
+}), m = {
   class: "btn-group-toggle",
   "data-toggle": "buttons"
 };
-function b(e, t, s, o, r, p) {
-  return n(), a("div", $, [
-    l(e.$slots, "default")
+function b(t, o, e, s, n, p) {
+  return r(), a("div", m, [
+    l(t.$slots, "default")
   ]);
 }
-const B = /* @__PURE__ */ c(_, [["render", b]]), z = {}, m = {
+const C = /* @__PURE__ */ c($, [["render", b]]), h = {}, v = {
   class: "btn-toolbar",
   role: "toolbar"
 };
-function x(e, t) {
-  return n(), a("div", m, [
-    l(e.$slots, "default")
+function B(t, o) {
+  return r(), a("div", v, [
+    l(t.$slots, "default")
   ]);
 }
-const C = /* @__PURE__ */ c(z, [["render", x]]);
+const S = /* @__PURE__ */ c(h, [["render", B]]);
 export {
-  v as BtnGroup,
-  B as BtnGroupToggle,
-  C as BtnToolbar
+  k as BtnGroup,
+  C as BtnGroupToggle,
+  S as BtnToolbar
 };
