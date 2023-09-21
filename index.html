@@ -12,185 +12,230 @@
             <h2 class="text-2xl mb-3">Basic Usage</h2>
 
             <btn-group>
-                <btn variant="secondary">Left</btn>
-                <btn variant="secondary">Middle</btn>
-                <btn variant="secondary">Right</btn>
+                <btn class="btn-secondary">Left</btn>
+                <btn class="btn-secondary">Middle</btn>
+                <btn class="btn-secondary">Right</btn>
             </btn-group>
 
             <h2 class="text-2xl mt-6 mb-3">Split Buttons</h2>
 
-            <div role="group" class="btn-dropdown-split btn-dropdown mr-1 btn-group">
-                <button aria-haspopup="true" type="button" class="btn btn-secondary">Primary</button>
+            <div role="group" class="btn-dropdown-split btn-dropdown btn-group">
+                <btn class="btn-secondary">Click Me</btn>
                 <div role="group" class="btn-group">
                     <button type="button" aria-haspopup="true" class="btn btn-secondary dropdown-toggle-split dropdown-toggle"></button>
                 </div>
             </div>
             
-            <h2 class="text-2xl mt-6 mb-3">Button Toolbar</h2>
-
-            <btn-toolbar class="mb-3">
-                <btn-group class="mr-2">
-                    <btn variant="secondary">1</btn>
-                    <btn variant="secondary">2</btn>
-                    <btn variant="secondary">3</btn>
-                    <btn variant="secondary">4</btn>
-                </btn-group>
-
-                <btn-group class="mr-2">
-                    <btn variant="secondary">4</btn>
-                    <btn variant="secondary">5</btn>
-                    <btn variant="secondary">6</btn>
-                </btn-group>
-
-                <btn-group>
-                    <btn variant="primary">8</btn>
-                </btn-group>
-            </btn-toolbar>
-
-            <!-- <h2 class="text-2xl mt-6 mb-3">Button Toolbar w/Input</h2>
-
-            <btn-toolbar class="mb-3">
-                <btn-group class="mr-2">
-                    <btn variant="secondary">1</btn>
-                    <btn variant="secondary">2</btn>
-                    <btn variant="secondary">3</btn>
-                    <btn variant="secondary">4</btn>
-                </btn-group>
-
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-            </btn-toolbar> -->
-
             <h2 class="text-2xl mt-6 mb-3">Sizing</h2>
 
-            <div class="mb-2">
-                <btn-group size="xs">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
+            <div class="flex flex-col gap-2">
+                <div>
+                    <btn-group size="btn-group-xs">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-sm">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-md">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-lg">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-xl">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-2xl">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-3xl">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
+
+                <div>
+                    <btn-group size="btn-group-4xl" class="mb-2">
+                        <btn class="btn-secondary">Left</btn>
+                        <btn class="btn-secondary">Middle</btn>
+                        <btn class="btn-secondary">Right</btn>
+                    </btn-group>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <btn-group size="sm">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
+            <h2 class="text-2xl mt-6 mb-3">Regular Sizing</h2>
+
+            <div class="flex gap-2">
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-xs">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-sm">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-md">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-lg">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-xl">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-2xl">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-3xl">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown btn-group btn-group-4xl">
+                        <btn class="btn-secondary dropdown-toggle">Click Me</btn>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <btn-group size="base">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
+            <h2 class="text-2xl mt-6 mb-3">Split Sizing</h2>
+
+            <div class="flex gap-2">
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-xs">
+                        <btn class="btn-secondary btn-xs">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-xs dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-sm">
+                        <btn class="btn-secondary btn-sm">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-sm dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group">
+                        <btn class="btn-secondary btn-md">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-md dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-lg">
+                        <btn class="btn-secondary btn-lg">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-lg dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-xl">
+                        <btn class="btn-secondary btn-xl">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-xl dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-2xl">
+                        <btn class="btn-secondary btn-2xl">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-2xl dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-3xl">
+                        <btn class="btn-secondary btn-3xl">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-3xl dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div role="group" class="btn-dropdown-split btn-dropdown btn-group btn-group-4xl">
+                        <btn class="btn-secondary btn-4xl">Click Me</btn>
+                        <div role="group" class="btn-group">
+                            <button type="button" aria-haspopup="true" class="btn btn-secondary btn-4xl dropdown-toggle-split dropdown-toggle"></button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <btn-group size="lg">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
-            </div>
-
-            <div class="mb-2">
-                <btn-group size="xl">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
-            </div>
-
-            <div class="mb-2">
-                <btn-group size="2xl">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
-            </div>
-
-            <div class="mb-2">
-                <btn-group size="3xl">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
-            </div>
-
-            <div>
-                <btn-group size="4xl" class="mb-2">
-                    <btn variant="secondary">Left</btn>
-                    <btn variant="secondary">Middle</btn>
-                    <btn variant="secondary">Right</btn>
-                </btn-group>
-            </div>
-
-            <!--
-            <h2>Nesting</h2>
-
-            <form-group>
-                <btn-group>
-                    <btn variant="secondary">1</btn>
-                    <btn variant="secondary">2</btn>
-                    <btn-dropdown variant="secondary" label="Dropdown">
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                </btn-group>
-            </form-group>
-
-            <form-group>
-                <btn-group>
-                    <btn variant="secondary">1</btn>
-                    <btn variant="secondary">2</btn>
-                    <btn-dropdown variant="secondary" label="Dropdown" split>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                </btn-group>
-            </form-group>
-
-            <hr>
-            -->
 
             <h2 class="text-2xl mt-6 mb-3">Vertical Variation</h2>
 
             <btn-group vertical>
-                <btn variant="secondary">Button</btn>
-                <btn variant="secondary">Button</btn>
-                <btn variant="secondary">Button</btn>
-                <btn variant="secondary">Button</btn>
+                <btn class="btn-secondary">Top</btn>
+                <btn class="btn-secondary">Middle</btn>
+                <btn class="btn-secondary">Bottom</btn>
+                <div role="group" class="btn-dropdown-split btn-dropdown btn-group">
+                    <btn class="btn-secondary">Click Me</btn>
+                    <div role="group" class="btn-group">
+                        <button type="button" aria-haspopup="true" class="btn btn-secondary dropdown-toggle-split dropdown-toggle"></button>
+                    </div>
+                </div>
             </btn-group>
-
-            <!--
-            <form-group>
-                <btn-group vertical>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn-dropdown variant="secondary" label="Dropdown">
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                    <btn variant="secondary">Button</btn>
-                    <btn variant="secondary">Button</btn>
-                    <btn-dropdown variant="secondary" label="Dropdown">
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                    <btn-dropdown variant="secondary" label="Dropdown">
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                    <btn-dropdown variant="secondary" label="Dropdown">
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                        <dropdown-menu-item href="#">Dropdown link</dropdown-menu-item>
-                    </btn-dropdown>
-                </btn-group>
-            </form-group> -->
 
         </div>
 
@@ -203,7 +248,7 @@
                 BtnGroup,
                 BtnToolbar,
                 BtnGroupToggle
-            } from './index.js';
+            } from './index';
 
             createApp({
                 components: {

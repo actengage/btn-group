@@ -1,59 +1,20 @@
-<script lang="ts">
-import { Sizeable } from '@vue-interface/sizeable';
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { computed } from 'vue';
 
-export default defineComponent({
+export type BtnGroupProps = {
+    size?: string,
+    toggle?: boolean,
+    vertical?: boolean
+};
 
-    name: 'BtnGroup',
+const props = defineProps<BtnGroupProps>();
 
-    mixins: [
-        Sizeable
-    ],
-
-    props: {
-
-        /**
-         * The size prefix.
-         *
-         * @param {String}
-         */
-        sizePrefix: {
-            type: String,
-            default() {
-                return 'btn-group';
-            }
-        },
-
-        /**
-         * Denote the button group as toggle buttons
-         *
-         * @type {Boolean}
-         */
-        toggle: Boolean,
-
-        /**
-         * Display the buttons vertically
-         *
-         * @type {Boolean}
-         */
-        vertical: Boolean
-
-    },
-
-    computed: {
-
-        classes() {
-            return {
-                'btn-group': !this.vertical,
-                'btn-group-toggle': this.toggle,
-                'btn-group-vertical': this.vertical,
-                [this.sizeableClass]: !!this.size,
-            };
-        }
-
-    }
-
-});
+const classes = computed(() => ({
+    'btn-group': true,
+    'btn-group-toggle': props.toggle,
+    'btn-group-vertical': props.vertical,
+    [String(props.size)]: !!props.size,
+}));
 </script>
 
 <template>

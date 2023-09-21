@@ -1,84 +1,55 @@
-import { Sizeable as g } from "@vue-interface/sizeable";
-import { defineComponent as i, openBlock as r, createElementBlock as a, normalizeClass as u, renderSlot as l } from "vue";
-const d = i({
-  name: "BtnGroup",
-  mixins: [
-    g
-  ],
+import { defineComponent as c, computed as p, openBlock as r, createElementBlock as a, normalizeClass as u, renderSlot as l } from "vue";
+const _ = ["data-toggle"], h = /* @__PURE__ */ c({
+  __name: "BtnGroup",
   props: {
-    /**
-     * The size prefix.
-     *
-     * @param {String}
-     */
-    sizePrefix: {
-      type: String,
-      default() {
-        return "btn-group";
-      }
-    },
-    /**
-     * Denote the button group as toggle buttons
-     *
-     * @type {Boolean}
-     */
-    toggle: Boolean,
-    /**
-     * Display the buttons vertically
-     *
-     * @type {Boolean}
-     */
-    vertical: Boolean
+    size: {},
+    toggle: { type: Boolean },
+    vertical: { type: Boolean }
   },
-  computed: {
-    classes() {
-      return {
-        "btn-group": !this.vertical,
-        "btn-group-toggle": this.toggle,
-        "btn-group-vertical": this.vertical,
-        [this.sizeableClass]: !!this.size
-      };
-    }
+  setup(t) {
+    const o = t, e = p(() => ({
+      "btn-group": !0,
+      "btn-group-toggle": o.toggle,
+      "btn-group-vertical": o.vertical,
+      [String(o.size)]: !!o.size
+    }));
+    return (n, s) => (r(), a("div", {
+      class: u(e.value),
+      "data-toggle": n.toggle ? "buttons" : !1,
+      role: "group"
+    }, [
+      l(n.$slots, "default")
+    ], 10, _));
   }
-}), c = (t, o) => {
-  const e = t.__vccOpts || t;
-  for (const [s, n] of o)
-    e[s] = n;
-  return e;
-}, _ = ["data-toggle"];
-function f(t, o, e, s, n, p) {
-  return r(), a("div", {
-    class: u(t.classes),
-    "data-toggle": t.toggle ? "buttons" : !1,
-    role: "group"
-  }, [
-    l(t.$slots, "default")
-  ], 10, _);
-}
-const k = /* @__PURE__ */ c(d, [["render", f]]), $ = i({
+}), i = c({
   name: "BtnGroupToggle"
-}), m = {
+}), g = (t, o) => {
+  const e = t.__vccOpts || t;
+  for (const [n, s] of o)
+    e[n] = s;
+  return e;
+}, d = {
   class: "btn-group-toggle",
   "data-toggle": "buttons"
 };
-function b(t, o, e, s, n, p) {
+function f(t, o, e, n, s, v) {
+  return r(), a("div", d, [
+    l(t.$slots, "default")
+  ]);
+}
+const z = /* @__PURE__ */ g(i, [["render", f]]), $ = {}, m = {
+  class: "btn-toolbar",
+  role: "toolbar"
+};
+function b(t, o) {
   return r(), a("div", m, [
     l(t.$slots, "default")
   ]);
 }
-const C = /* @__PURE__ */ c($, [["render", b]]), h = {}, v = {
-  class: "btn-toolbar",
-  role: "toolbar"
-};
-function B(t, o) {
-  return r(), a("div", v, [
-    l(t.$slots, "default")
-  ]);
-}
-const S = /* @__PURE__ */ c(h, [["render", B]]);
+const G = /* @__PURE__ */ g($, [["render", b]]);
 export {
-  k as BtnGroup,
-  C as BtnGroupToggle,
-  S as BtnToolbar
+  h as BtnGroup,
+  z as BtnGroupToggle,
+  G as BtnToolbar
 };
 //# sourceMappingURL=btn-group.js.map
