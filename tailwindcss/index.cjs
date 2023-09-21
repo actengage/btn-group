@@ -255,6 +255,7 @@ module.exports = plugin(function({ addComponents, matchComponents, theme }) {
                         display: 'inline-block',
                         verticalAlign: 'calc(.3em * .85)',
                         content: '""',
+                        margin: '0 .15em',
                         borderTop: '.3em solid',
                         borderRight: '.3em solid transparent',
                         borderBottom: 0,
@@ -263,7 +264,60 @@ module.exports = plugin(function({ addComponents, matchComponents, theme }) {
 
                     '.dropdown-toggle:not(.dropdown-toggle-split)::after': {
                         marginLeft: 'calc(.375rem * .75)'
-                    }
+                    },
+
+                    // Allow for dropdowns to go bottom up (aka, dropup-menu)
+                    // Just add .dropup after the standard .dropdown class and you're set.
+                    // '&.dropup': {
+                    // },
+    
+                    '&.dropup .dropdown-toggle::after': {
+                        display: 'inline-block',
+                        verticalAlign: 'calc(.3em * .85)',
+                        content: '""',
+                        borderTop: 0,
+                        borderRight: '.3em solid transparent',
+                        borderBottom: '.3em solid',
+                        borderLeft: '.3em solid transparent',
+                        top: 'auto',
+                        bottom: '100%',
+                        marginTop: 0,
+                    },
+        
+                    '&.dropright .dropdown-toggle::after': {
+                        display: 'inline-block',
+                        verticalAlign: 'calc(.3em * .85)',
+                        content: '""',
+                        borderTop: '.3em solid transparent',
+                        borderRight: 0,
+                        borderBottom: '.3em solid transparent',
+                        borderLeft: '.3em solid',
+                        verticalAlign: 0,
+                        top: 0,
+                        right: 'auto',
+                        left: '100%',
+                        marginTop: 0,
+                    },
+        
+                    '&.dropleft .dropdown-toggle::after': {
+                        display: 'none'
+                    }, 
+
+                    '&.dropleft .dropdown-toggle::before': {
+                        display: 'inline-block',
+                        verticalAlign: 'calc(.3em * .85)',
+                        content: '""',
+                        margin: '0 .15em',
+                        borderTop: '.3em solid transparent',
+                        borderLeft: 0,
+                        borderBottom: '.3em solid transparent',
+                        borderRight: '.3em solid',
+                        verticalAlign: 0,
+                        top: 0,
+                        right: '100%',
+                        left: 'auto',
+                        marginTop: 0,
+                    },
                 },
             },
             sizes: theme('btn.sizes', sizes)
