@@ -1,6 +1,6 @@
 {
   "name": "@vue-interface/btn-group",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0-beta.7",
   "description": "A Vue button group component.",
   "files": [
     "dist",
