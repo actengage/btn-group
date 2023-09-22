@@ -1,3 +1,10 @@
+# [2.0.0-beta.8](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2023-09-22)
+
+
+### Bug Fixes
+
+* updated package.json ([c77757a](https://github.com/vue-interface/btn-group/commit/c77757ac9c4730c99bb2c902cdb5585703cd4c24))
+
 # [2.0.0-beta.7](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.6...v2.0.0-beta.7) (2023-09-21)
 
 
