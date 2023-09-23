@@ -139,7 +139,7 @@ module.exports = plugin(function({ addComponents, matchComponents, theme }) {
 
     matchComponents({
         'btn-group': ({ padding, paddingX, borderRadius, fontSize }) => ({
-            '&.btn-group, &.BtnGroup, &.btn-dropdown.btn-group, &.BtnDropdown.btn-group': {
+            '&.btn-group, &.BtnGroup, &.btn-dropdown.btn-group': {
                 '.btn': {
                     padding,
                     borderRadius,
