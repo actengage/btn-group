@@ -1,3 +1,10 @@
+# [2.0.0-beta.9](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.8...v2.0.0-beta.9) (2023-09-23)
+
+
+### Bug Fixes
+
+* issues with JIT parsing BtnDropdown ([aace059](https://github.com/vue-interface/btn-group/commit/aace0598053a0f9fe7b0c014c63b2473c960db6c))
+
 # [2.0.0-beta.8](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.7...v2.0.0-beta.8) (2023-09-22)
 
 
