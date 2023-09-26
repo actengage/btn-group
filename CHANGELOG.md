@@ -1,3 +1,10 @@
+# [2.0.0-beta.10](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.9...v2.0.0-beta.10) (2023-09-26)
+
+
+### Bug Fixes
+
+* updated tsconfig ([045527b](https://github.com/vue-interface/btn-group/commit/045527b1c68ebc3a8faf3838f35439b80674cb44))
+
 # [2.0.0-beta.9](https://github.com/vue-interface/btn-group/compare/v2.0.0-beta.8...v2.0.0-beta.9) (2023-09-23)
 
 
